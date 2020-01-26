@@ -265,9 +265,6 @@ __irq void P0_IRQHandler (void);
 static void* vectors[0xC0/4] __attribute__((used, section (".vectors"))) = {
 	[0] = (void*)0x20000800,
 	[1] = _start,
-	[3] = HardFault_Handler,
 	[15] = SysTick_Handler,
-	[16] = NDT_IRQHandler,
 	[17] = USB_IRQHandler,
-	[47] = P0_IRQHandler,
 };
